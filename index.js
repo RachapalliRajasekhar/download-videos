@@ -52,6 +52,7 @@ async function downloadPlaylist() {
     }
   } catch (error) {
     printError(`Error downloading playlist: ${JSON.stringify(error)}`);
+    getFinalStatus({ videosIndexes, playListLength });
   } finally {
     getFinalStatus({ videosIndexes, playListLength });
   }
