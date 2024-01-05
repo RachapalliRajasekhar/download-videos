@@ -30,7 +30,7 @@ function printSuccess(message) {
 
 function printError(message) {
   console.error(errorChalk.bold(`${getCurrentDateTimeIST()}:- ${message}`));
-  throw error;
+  throw message;
 }
 
 function printWarning(message) {
