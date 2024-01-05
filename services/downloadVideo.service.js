@@ -16,8 +16,9 @@ async function downloadVideo({ videoItem, folderName, skipVideos }) {
     const info = await youtubeDownload.getInfo(shortUrl);
     printInfo(`Setting Video Formate!`);
     const format = youtubeDownload.chooseFormat(info?.formats, {
-      // eslint-disable-next-line @cspell/spellchecker
+      // eslint-disable-next-line
       quality: "highestaudio",
+      // eslint-enable-next-line
     });
     try {
       await downloadAndUploadVideo({
