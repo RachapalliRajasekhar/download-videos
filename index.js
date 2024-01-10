@@ -44,7 +44,9 @@ async function downloadPlaylist () {
         folderName,
         skipVideos
       })
-      index ? videosIndexes.push(index) : undefined
+      if (index) {
+        videosIndexes.push(index)
+      }
     }
   } catch (error) {
     printError(`Error downloading playlist: ${JSON.stringify(error)}`)
