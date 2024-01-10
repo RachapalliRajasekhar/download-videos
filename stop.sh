@@ -1,3 +1,4 @@
+#!/bin/bash
 pid=$(ps -p aux | grep '/c/Program Files/nodejs/node' | awk '{print $1}')
   if [ -n "$pid" ]; then
     kill "$pid"
